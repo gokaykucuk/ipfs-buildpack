@@ -1,4 +1,4 @@
 wget https://dist.ipfs.io/go-ipfs/v0.10.0/go-ipfs_v0.10.0_linux-amd64.tar.gz
-tar -xvzf go-ipfs_v0.10.0_linux-amd64.tar.gz
-mv go-ipfs/ipfs $BUILD_DIR/ipfs
-ipfs init
+mkdir -p vendor/go-ipfs
+tar -C vendor/go-ipfs -xvzf go-ipfs_v0.10.0_linux-amd64.tar.gz
+ls vendor/go-ipfs
