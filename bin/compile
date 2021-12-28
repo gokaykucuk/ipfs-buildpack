@@ -2,4 +2,7 @@ echo "-----> Installing IPFS"
 wget https://dist.ipfs.io/go-ipfs/v0.11.0/go-ipfs_v0.11.0_linux-amd64.tar.gz
 mkdir -p $1/vendor
 tar -C $1/vendor/ -xvzf go-ipfs_v0.11.0_linux-amd64.tar.gz
-ls $1/vendor/go-ipfs
+mkdir -p "$1/.profile.d/"
+cat <<EOF >"$1"/.profile.d/ipfs.sh
+export PATH="\$PATH:$1/vendor/go-ipfs/"
+EOF
