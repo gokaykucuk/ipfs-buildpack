@@ -1,10 +1,11 @@
 #!/bin/sh
 
-cat <<\EOF >
+
+cat << EOF
 ---
 default_process_types:
   ipfs: ipfs daemon --enable-pubsub-experiment
 config_vars:
-  PATH: \$PATH:$1/vendor/go-ipfs/bin
+  PATH: $PATH:${1}/vendor/go-ipfs/bin
 EOF
 
