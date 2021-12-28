@@ -3,5 +3,5 @@
 cat << EOF
 ---
 default_process_types:
-  ipfs: go-ipfs/ipfs daemon --enable-pubsub-experiment
+  ipfs: ipfs daemon --enable-pubsub-experiment
 EOF

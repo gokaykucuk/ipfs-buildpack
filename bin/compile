@@ -1,3 +1,7 @@
 wget https://dist.ipfs.io/go-ipfs/v0.10.0/go-ipfs_v0.10.0_linux-amd64.tar.gz
 tar -xvzf go-ipfs_v0.10.0_linux-amd64.tar.gz
 go-ipfs/ipfs init
+
+topic "Creating path exports"
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH=\$PATH:\$HOME/go-ipfs/bin" >> $BUILD_DIR/.profile.d/go-ipfs.sh
