@@ -1,6 +1,5 @@
 wget https://dist.ipfs.io/go-ipfs/v0.10.0/go-ipfs_v0.10.0_linux-amd64.tar.gz
 tar -xvzf go-ipfs_v0.10.0_linux-amd64.tar.gz
 mkdir -p .profile.d
-export PATH=\$PATH:\$HOME/go-ipfs/bin
-ipfs init
+PATH=\$PATH:\$HOME/go-ipfs/bin ipfs init
 echo "export PATH=\$PATH:\$HOME/go-ipfs/bin" >> .profile.d/go-ipfs.sh
